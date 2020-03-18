@@ -78,7 +78,7 @@ class DFJsonKit{
     }
     
     /// Model转Json对象(数组/字典)
-    func modelTojson<T:Codable>(obj:T)->Any?{
+    static func modelTojson<T:Codable>(obj:T)->Any?{
         do{
             let data = try JSONEncoder().encode(obj)
             let json = try JSONSerialization.jsonObject(with: data, options: [])
